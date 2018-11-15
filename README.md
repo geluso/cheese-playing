@@ -9,6 +9,8 @@ Live: http://5tephen.com/cheese-playne/
 
 # Installation
 
+Double-check and change `BASE_URL` in `config.js` to just `'/'`.
+
 ```
 npm install -g parcel-bundler yarn
 yarn install
