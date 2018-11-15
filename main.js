@@ -10,6 +10,7 @@ console.log('config:', BASE_URL)
 
 import './style.css'
 import Navbar from './components/Navbar'
+import CheesePlane from './components/CheesePlane'
 import Homepage from './components/Homepage'
 
 import TeamDetailPage from './components/TeamDetailPage'
@@ -51,7 +52,9 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <div id="app-container">
+        <CheesePlane />
         <Navbar />
+
         <Route exact path={BASE_URL} component={Homepage} />
         <Route exact path={BASE_URL + 'teams/create'} component={TeamCreatePage} />
         <Route path={BASE_URL + 'teams/id/:id'} component={TeamDetailPage} />
