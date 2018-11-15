@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createGame } from '../reducers/GamesReducer'
 
-import Standings from './Standings'
 import GamesPlayed from './GamesPlayed'
 
 class GameCreatePage extends Component {

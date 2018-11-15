@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addPoint, subtractPoint } from '../reducers/GamesReducer'
-import Standings from './Standings'
 
 class GameDetailPage extends Component {
   getGame() {
