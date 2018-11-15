@@ -1,6 +1,15 @@
 body {
 }
 
+a.unsubtle {
+  text-decoration: underline;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 #app-container {
     width: 600px;
     background-color: #aaa;
