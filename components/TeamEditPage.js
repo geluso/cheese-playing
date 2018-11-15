@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { editTeam } from '../reducers/TeamsActions'
 
+import { BASE_URL } from '../config'
+
 class TeamEditPage extends Component {
   constructor(props) {
     super(props)
@@ -12,6 +14,7 @@ class TeamEditPage extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.goHome = this.goHome.bind(this)
   }
 
   handleChange() {
@@ -23,7 +26,12 @@ class TeamEditPage extends Component {
     ev.preventDefault()
 
     const team = this.buildTeamFromForm()
-    this.props.createTeam(team)
+    this.props.saveTeam(team)
+    this.goHome()
+  }
+
+  goHome() {
+    this.props.history.push(BASE_URL)
   }
 
   buildTeamFromForm() {
@@ -36,6 +44,7 @@ class TeamEditPage extends Component {
     const member3 = inputs[3].value
 
     const team = {
+      id: this.state.team.id,
       name,
       members: [member1, member2, member3]
     }
@@ -109,7 +118,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    createTeam: (team) => {
+    saveTeam: (team) => {
       dispatch(editTeam(team))
     }
   }

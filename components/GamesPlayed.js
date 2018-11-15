@@ -62,12 +62,12 @@ class GamesPlayed extends Component {
   gamesPlayed() {
     const gamesPlayed = {}
     for (const team of this.props.teams) {
-      gamesPlayed[team.name] = {}
+      gamesPlayed[team.id] = {}
     }
 
     for (const game of this.props.games) {
-      gamesPlayed[game.team1.name][game.team2.name] = game.team1.points + '-' + game.team2.points
-      gamesPlayed[game.team2.name][game.team1.name] = game.team2.points + '-' + game.team1.points
+      gamesPlayed[game.team1.id][game.team2.id] = game.team1.points + '-' + game.team2.points
+      gamesPlayed[game.team2.id][game.team1.id] = game.team2.points + '-' + game.team1.points
     }
 
     return gamesPlayed
@@ -114,7 +114,7 @@ class GamesPlayed extends Component {
                 if (team === otherTeam) {
                   return <td key={team + otherTeam} className="unplayed">x-x</td>
                 }
-                const score = gamesPlayed[team.name][otherTeam.name]
+                const score = gamesPlayed[team.id][otherTeam.id]
                 const teamScores = score && score.split('-')
 
                 let className = 'tie'

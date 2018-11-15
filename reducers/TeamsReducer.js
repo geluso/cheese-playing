@@ -19,18 +19,19 @@ const teamsReducer = (state, action) => {
     }
 
     case EDIT_TEAM: {
+      console.log('action', action.team)
       let teams = [...state.teams]
-      teams = teams.map(team => {
+      let newTeams = teams.map(team => {
         // find the team that matches the id of the team we're updating
         // replace the current team info with the new team info
         // return every other non-matching team just as they were
-        if (team.id === action.team.id) {
+        if (team.id == action.team.id) {
           return action.team
         } else {
-          team
+          return team
         }
       })
-      return { teams }
+      return { teams: newTeams }
     }
     default: {
       return state
