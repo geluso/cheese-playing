@@ -28,10 +28,6 @@ const GAMES = [
     team2: { id: 4, points: 0 }
   },
   {
-    team1: { id: 2, points: 1 },
-    team2: { id: 1, points: 6 }
-  },
-  {
     team1: { id: 2, points: 6 },
     team2: { id: 8, points: 4 }
   },
@@ -40,10 +36,6 @@ const GAMES = [
     team2: { id: 5, points: 2 }
   },
   // 3 Retirees
-  {
-    team1: { id: 3, points: 2 },
-    team2: { id: 2, points: 6 }
-  },
   {
     team1: { id: 3, points: 2 },
     team2: { id: 6, points: 1 }
@@ -62,16 +54,8 @@ const GAMES = [
     team2: { id: 6, points: 0 }
   },
   {
-    team1: { id: 4, points: 0 },
-    team2: { id: 2, points: 3 }
-  },
-  {
     team1: { id: 4, points: 3 },
     team2: { id: 8, points: 1 }
-  },
-  {
-    team1: { id: 4, points: 1 },
-    team2: { id: 1, points: 8 }
   },
   {
     team1: { id: 4, points: 5 },
@@ -94,23 +78,7 @@ const GAMES = [
     team1: { id: 5, points: 3 },
     team2: { id: 7, points: 3 }
   },
-  {
-    team1: { id: 5, points: 2 },
-    team2: { id: 2, points: 7 }
-  },
   // 6 Zissou
-  {
-    team1: { id: 6, points: 0 },
-    team2: { id: 4, points: 4 }
-  },
-  {
-    team1: { id: 6, points: 1 },
-    team2: { id: 3, points: 2 }
-  },
-  {
-    team1: { id: 6, points: 3 },
-    team2: { id: 5, points: 3 }
-  },
   {
     team1: { id: 6, points: 3 },
     team2: { id: 9, points: 2 }
@@ -120,77 +88,9 @@ const GAMES = [
     team1: { id: 7, points: 2 },
     team2: { id: 9, points: 0 }
   },
-  {
-    team1: { id: 7, points: 2 },
-    team2: { id: 1, points: 5 }
-  },
-  {
-    team1: { id: 7, points: 6 },
-    team2: { id: 3, points: 4 }
-  },
-  {
-    team1: { id: 7, points: 3 },
-    team2: { id: 5, points: 3 }
-  },
-  {
-    team1: { id: 7, points: 4 },
-    team2: { id: 4, points: 5 }
-  },
   // 8 beer senator
-  {
-    team1: { id: 8, points: 1 },
-    team2: { id: 5, points: 2 }
-  },
-  {
-    team1: { id: 8, points: 1 },
-    team2: { id: 4, points: 3 }
-  },
-  {
-    team1: { id: 8, points: 4 },
-    team2: { id: 2, points: 6 }
-  },
-  {
-    team1: { id: 8, points: 0 },
-    team2: { id: 1, points: 4 }
-  },
   // 9 bobs burglars
-  {
-    team1: { id: 9, points: 0 },
-    team2: { id: 7, points: 4 }
-  },
-  {
-    team1: { id: 9, points: 2 },
-    team2: { id: 5, points: 3 }
-  },
-  {
-    team1: { id: 9, points: 1 },
-    team2: { id: 3, points: 7 }
-  },
-  {
-    team1: { id: 9, points: 2 },
-    team2: { id: 6, points: 3 }
-  },
   // 10 instamix
-  {
-    team1: { id: 10, points: 0 },
-    team2: { id: 1, points: 5 }
-  },
-  {
-    team1: { id: 10, points: 0 },
-    team2: { id: 8, points: 5 }
-  },
-  {
-    team1: { id: 10, points: 0 },
-    team2: { id: 9, points: 5 }
-  },
-  {
-    team1: { id: 10, points: 0 },
-    team2: { id: 6, points: 5 }
-  },
-  {
-    team1: { id: 10, points: 0 },
-    team2: { id: 3, points: 5 }
-  },
   {
     team1: { id: 10, points: 0 },
     team2: { id: 1, points: 5 }

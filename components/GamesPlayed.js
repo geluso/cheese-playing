@@ -32,10 +32,6 @@ class GamesPlayed extends Component {
       }
     })
 
-    wins /= 2
-    ties /= 2
-    losses /= 2
-
     return { team, wins, ties, losses }
   }
 
