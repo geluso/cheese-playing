@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../config'
 
 class TeamsList extends Component {
   render() {
@@ -8,7 +9,7 @@ class TeamsList extends Component {
       <h1>Teams</h1>
       {this.props.teams.map((team, index) => {
         return <div key={index} className="team">
-          <Link to={"/cheese-playne/teams/id/" + team.id}>
+          <Link to={BASE_URL + "teams/id/" + team.id}>
             {team.name}
           </Link>
         </div>

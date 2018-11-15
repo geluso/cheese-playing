@@ -44,6 +44,11 @@ const TEAMS = [
     name: 'Bob\'s Burglars',
     members: ['MidwestMegs CHI', 'megan ATX', 'Esteban ANC']
   },
+  {
+    id: 10,
+    name: 'Instamix',
+    members: ['Ramen', 'Campbell', 'Rainier']
+  },
 ];
 
 export default TEAMS

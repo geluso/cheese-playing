@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { BASE_URL } from '../config'
 
 class TeamDetailPage extends Component {
   getTeam() {
@@ -28,7 +29,7 @@ class TeamDetailPage extends Component {
     return <div id="team-detail">
       <h1>{team.name}</h1>
       <p>
-        <Link to={"/cheese-playne/teams/edit/" + team.id}>edit</Link>
+        <Link to={BASE_URL + 'teams/edit/' + team.id}>edit</Link>
       </p>
       <ul>
         {team.members.map((member, index) => {

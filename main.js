@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 
+import { BASE_URL } from './config'
+console.log('config:', BASE_URL)
+
 import './style.css'
 import Navbar from './components/Navbar'
 import Homepage from './components/Homepage'
@@ -49,12 +52,12 @@ ReactDOM.render(
     <BrowserRouter>
       <div id="app-container">
         <Navbar />
-        <Route exact path="/cheese-playne/" component={Homepage} />
-        <Route exact path="/cheese-playne/teams/create" component={TeamCreatePage} />
-        <Route path="/cheese-playne/teams/id/:id" component={TeamDetailPage} />
-        <Route path="/cheese-playne/teams/edit/:id" component={TeamEditPage} />
-        <Route path="/cheese-playne/games/id/:id" component={GameDetailPage} />
-        <Route path="/cheese-playne/games/create/" component={GameCreatePage} />
+        <Route exact path={BASE_URL} component={Homepage} />
+        <Route exact path={BASE_URL + 'teams/create'} component={TeamCreatePage} />
+        <Route path={BASE_URL + 'teams/id/:id'} component={TeamDetailPage} />
+        <Route path={BASE_URL + 'teams/edit/:id'} component={TeamEditPage} />
+        <Route path={BASE_URL + 'games/id/:id'} component={GameDetailPage} />
+        <Route path={BASE_URL + 'games/create/'} component={GameCreatePage} />
       </div>
     </BrowserRouter>
   </Provider>

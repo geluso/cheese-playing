@@ -67,7 +67,6 @@ class GameCreatePage extends Component {
       </form>
 
       <GamesPlayed />
-      <Standings />
     </div>
   }
 }

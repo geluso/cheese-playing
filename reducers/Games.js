@@ -170,6 +170,47 @@ const GAMES = [
     team1: { id: 9, points: 2 },
     team2: { id: 6, points: 3 }
   },
+  // 10 instamix
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 1, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 8, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 9, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 6, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 3, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 1, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 8, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 9, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 6, points: 5 }
+  },
+  {
+    team1: { id: 10, points: 0 },
+    team2: { id: 3, points: 5 }
+  },
 ]
 
 function getTeamName(id) {

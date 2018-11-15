@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../config'
 
 class GamesList extends Component {
   render() {
@@ -8,7 +9,7 @@ class GamesList extends Component {
       <h1>Games</h1>
       {this.props.games.map((game, index) => {
         return <div key={index} className="team">
-          <Link to={"/cheese-playne/games/id/" + game.id}>
+          <Link to={BASE_URL + "games/id/" + game.id}>
             {game.team1.name} {' vs '} {game.team2.name}
           </Link>
         </div>
