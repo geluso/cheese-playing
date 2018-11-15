@@ -60,6 +60,7 @@ ReactDOM.render(
         <Route path={BASE_URL + 'teams/id/:id'} component={TeamDetailPage} />
         <Route path={BASE_URL + 'teams/edit/:id'} component={TeamEditPage} />
         <Route path={BASE_URL + 'games/id/:id'} component={GameDetailPage} />
+        <Route path={BASE_URL + 'games/versus/:team1Id/:team2Id'} component={GameDetailPage} />
         <Route path={BASE_URL + 'games/create/'} component={GameCreatePage} />
       </div>
     </BrowserRouter>

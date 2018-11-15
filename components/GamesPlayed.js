@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { BASE_URL } from '../config'
 
 class GamesPlayed extends Component {
   constructor(props) {
@@ -102,7 +104,11 @@ class GamesPlayed extends Component {
                 {standings[index1].wins + standings[index1].ties + standings[index1].losses}
               </th>
 
-              <th className="team-name-column">{index1 + 1}{': '}{team.name.substr(0, 21)}</th>
+              <th className="team-name-column">
+                <Link to={BASE_URL + 'teams/id/' + team.id}>
+                  {index1 + 1}{': '}{team.name.substr(0, 21)}
+                </Link>
+              </th>
 
               {this.props.teams.map((otherTeam, i2) => {
                 if (team === otherTeam) {
@@ -121,7 +127,9 @@ class GamesPlayed extends Component {
                 }
 
                 return <td key={i2} className={className}>
-                  {score}
+                  <Link to={BASE_URL + 'games/versus/' + team.id + '/' + otherTeam.id}>
+                    {score}
+                  </Link>
                 </td>
               })}
             </tr>

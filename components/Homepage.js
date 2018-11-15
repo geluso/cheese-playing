@@ -7,8 +7,6 @@ export default class Homepage extends Component {
   render() {
     return <Fragment>
       <GamesPlayed />
-      <TeamsList />
-      <GamesList />
     </Fragment>
   }
 }

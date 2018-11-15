@@ -5,6 +5,19 @@ import { addPoint, subtractPoint } from '../reducers/GamesReducer'
 class GameDetailPage extends Component {
   getGame() {
     const id = this.props.match.params.id
+    const team1Id = this.props.match.params.team1Id
+    const team2Id = this.props.match.params.team2Id
+
+    let game = undefined;
+    if (id) {
+      game = this.findGameByGameId(id)
+    } else if (team1Id && team2Id) {
+      game = this.findGameByTeamIds(team1Id, team2Id)
+    }
+    return game
+  }
+
+  findGameByGameId(id) {
     const game = this.props.games.reduce((found, game) => {
       if (found) {
         return found
@@ -12,6 +25,23 @@ class GameDetailPage extends Component {
       if (game.id == id) {
         return game
       }
+      return false
+    }, false)
+    return game
+  }
+
+  findGameByTeamIds(oneTeamId, otherTeamId) {
+    const game = this.props.games.reduce((found, game) => {
+      if (found) {
+        return found
+      }
+
+      let isMatch = game.team1.id == oneTeamId && game.team2.id == otherTeamId
+      isMatch = isMatch || game.team1.id == otherTeamId && game.team2.id == oneTeamId
+      if (isMatch) {
+        return game
+      }
+
       return false
     }, false)
     return game
