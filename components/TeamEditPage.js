@@ -93,7 +93,7 @@ class TeamEditPage extends Component {
           />
         </p>
         <p>
-          <input type="submit" value="create"></input>
+          <input type="submit" value="save"></input>
         </p>
       </form>
     </div>

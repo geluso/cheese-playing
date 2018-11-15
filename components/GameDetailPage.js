@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addPoint, subtractPoint } from '../reducers/GamesReducer'
 
+import GamesPlayed from './GamesPlayed'
+
 class GameDetailPage extends Component {
   getGame() {
     const id = this.props.match.params.id
@@ -50,6 +52,9 @@ class GameDetailPage extends Component {
   render() {
     const game = this.getGame()
     return <div id="game-detail">
+  
+      <GamesPlayed />
+
       <h1>{game.team1.name} {' vs '} {game.team2.name}</h1>
       <h3>{game.team1.name}{': '}{game.team1.points}</h3>
       <p>

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+
 import { BASE_URL } from '../config'
+import GamesPlayed from './GamesPlayed'
 
 class TeamDetailPage extends Component {
   getTeam() {
@@ -22,11 +24,15 @@ class TeamDetailPage extends Component {
     const team = this.getTeam()
     if (!team) {
       return <div>
+        <GamesPlayed />
+
         <h1>Team Detail Error</h1>
         <p>Team not found</p>
       </div>
     }
     return <div id="team-detail">
+      <GamesPlayed />
+
       <h1>{team.name}</h1>
       <p>
         <Link to={BASE_URL + 'teams/edit/' + team.id}>edit</Link>
